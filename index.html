@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook - K1 - M13</h1>
+
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1</option>
+                <option value="K2">K2</option>
+                <option value="K3">K3</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        <h2 id="selected-level" class="level-title">Nivel: K1</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0 -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+        <div class="subtitle">Asegúrate de tener listos todos los materiales indicados en la DIAPOSITIVA 1 antes de iniciar la misión.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Asegúrate de tener listos todos los materiales indicados en la Diapositiva 1 antes de iniciar la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1 -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Dar la bienvenida a los niños, presentar el enfoque del día y preparar sus mentes para la actividad.</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 2 “Bienvenida” y saluda a los niños mientras muestras el logo de Gnius Club, luego introduce el tema del día y la necesidad de entrenar el cerebro para la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, CODE SQUAD! Bienvenidos al cuartel pirata. Hoy tenemos una misión emocionante: ¡encontrar el tesoro perdido del Capitán Barba de Arena! Pero primero, necesitamos estar listos para seguir el mapa y no perdernos en el camino. ¿Listos para entrenar sus cerebros y encontrar el tesoro juntos?</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la Diapositiva 3 "Gimnasio CODE SQUAD" e introduce la importancia de entrenar el cerebro antes de enfrentar el reto del día.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora que sabemos a dónde vamos, necesitamos preparar nuestros cerebros para seguir el mapa. ¡Vamos al gimnasio del CODE SQUAD! Vamos a movernos al ritmo de una canción y practicar cómo seguir instrucciones. ¿Listos? ¡Vamos a poner atención a cada paso!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-secuenciacion')">
+        <div class="title">🎶 Actividad 2: Baile de Algoritmos ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Preparar a los niños para la misión con un ejercicio de algoritmos a través de un baile.</div>
+    </div>
+    <div id="baile-secuenciacion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la Diapositiva 4 “Baile de Algoritmos” e introduce la canción que seguiremos hoy.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Ahora sí, CODE SQUAD! Vamos a hacer un baile pirata. Cada paso que hagamos será como una instrucción del mapa del tesoro. Escuchen bien la canción y sigan los movimientos. No se preocupen si no les sale perfecto la primera vez, estamos aquí para divertirnos y aprender juntos. ¡A bailar y entrenar!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">🧭 Actividad 3: Planteamiento del Problema ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Introducir a los niños en el contexto de la misión utilizando la historia.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 5, adopta la actitud de cuenta cuentos y narra la historia.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                ¡Genios del CODE SQUAD! Hoy nos unimos a un intrépido pirata llamado Capitán Barba de Arena. Este capitán ha viajado por todo el océano en busca de un tesoro legendario escondido en una isla misteriosa. ¡Pero atención! Nadie ha encontrado ese tesoro, porque para llegar hasta él es necesario seguir un mapa lleno de instrucciones muy precisas. El capitán necesita nuestra ayuda para descifrar la ruta y encontrar el tesoro antes de que otra tripulación pirata lo haga. ¿Están listos para la aventura? ¡Vamos a unir fuerzas y a descubrir ese tesoro perdido!
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 6 y explica el reto para motivar al CODE SQUAD.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                ¡CODE SQUAD! Nuestro reto es ayudar al Capitán Barba de Arena a seguir el mapa y llegar al tesoro. Pero no es tan fácil. El mapa está dividido en varias instrucciones y debemos seguirlas en el orden correcto. Cada paso representa un lugar al que debemos ir: la Cueva del Murciélago, la Roca del Delfín, y finalmente la Gran Palmera. ¡Pero cuidado! Una tormenta se acerca rápidamente y no sabemos qué pueda suceder. ¿Listos para ayudar al capitán y encontrar ese tesoro?
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: Formación de Parejas ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Explicar la importancia del trabajo en equipo en parejas y asegurar la organización.</div>
+    </div>
+    <div id="formacion-parejas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 7 “Formación de Equipos”, explica la importancia de trabajar en equipo y junta a los niños en pares. Si el número es impar, integra un trío para asegurar que todos tengan compañeros.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡CODE SQUAD! En una misión tan importante como esta, trabajar en equipo es la clave del éxito. ¡Dos cabezas piensan mejor que una! Cuando se ayudan mutuamente, ¡todo se vuelve más fácil y más divertido! Así como los piratas necesitan compañeros para navegar, ustedes necesitan una pareja para encontrar el tesoro escondido.
+Ahora busquen un amigo para formar un equipo y recuerden: si hay un número impar, ¡uno de ustedes será parte de un equipo de tres! Juntos vamos a completar esta gran aventura. ¿Listos para elegir a su compañero? ¡Vamos allá!"
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 8 "Equipos Organizados", verifica que todos los niños tengan pareja y estén listos para comenzar.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¿Todos encontraron a su pareja? ¡Perfecto! Ahora que tienen un compañero, recuerden que trabajar en pareja significa compartir y ayudarse. Si alguien necesita ayuda, ¡su compañero está ahí para apoyar!
+Cuando trabajamos juntos, ¡todo se vuelve más divertido! Ahora que estamos organizados, estamos listos para encontrar el tesoro escondido. ¿Todos listos? ¡Vamos a por ello, CODE SQUAD!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('codigo_visual')">
+        <div class="title">🎨 Actividad 5: Reto de Codificación ⏰ Tiempo: Variable <span id="activity-5-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Introducir los retos de codificación según la edad y trabajar con bloques de colores.</div>
+    </div>
+    <div id="codigo_visual" class="content">
+        <table id="activity-5-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6 -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('intercambio_construccion')">
+        <div class="title">🔄 Actividad 6: Intercambio de Códigos y Construcción ⏰ Tiempo: Variable <span id="activity-6-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Intercambio de códigos entre equipos y práctica de secuenciación con bloques.</div>
+    </div>
+    <div id="intercambio_construccion" class="content">
+        <table id="activity-6-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7 -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('obstaculo_historia')">
+        <div class="title">⚠️ Actividad 7: Mensaje del Cuartel ⏰ Tiempo: Variable <span id="activity-7-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Introducir un obstáculo en la narrativa para mantener el interés y la motivación.</div>
+    </div>
+    <div id="obstaculo_historia" class="content">
+        <table id="activity-7-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 8 -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion_reflexion')">
+        <div class="title">🏁 Actividad 8: Conclusión de la Historia y Reflexión ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Cierre de la misión y reflexión sobre lo aprendido durante la clase.</div>
+    </div>
+    <div id="conclusion_reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la DIAPOSITIVA 26 y cuenta el desenlace de la historia, luego guía la reflexión con preguntas.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                    "¡CODE SQUAD! ¡Felicidades, han llegado a la Playa del Tesoro! El Capitán Barba de Arena está tan emocionado que ya comenzó a bailar junto al tesoro. ¡Gracias a ustedes, hemos superado los desafíos y encontrado el tesoro escondido! Los personajes se sienten muy contentos por haber trabajado en equipo. 
+Ahora quiero hacerles algunas preguntas para reflexionar: 
+1. ¿Qué pasos fueron los más importantes en el camino al tesoro? 
+2. ¿Cómo nos ayudó seguir el código que creamos? 
+3. ¿Qué aprendimos sobre trabajar juntos para resolver problemas?"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+               <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+            content.style.display = "block";
+        }
+    }
+
+    function updateContent() {
+        var time = document.getElementById("class-time").value;
+        var level = document.getElementById("class-level").value;
+        document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+        document.getElementById("selected-level").innerText = "Nivel: " + level;
+
+        var steps = {
+    "K1": {
+        "5.1": [
+            {
+                "step": 1,
+                "time": { "30": 1, "40": 1, "50": 1 },
+                "accion": "Reproduce la DIAPOSITIVA 9 y explica cómo resolverán el problema.",
+                "dialogo": "¡CODE SQUAD! Para que el Capitán Barba de Arena pueda encontrar su tesoro, tenemos que seguir el mapa en el orden correcto. Primero visitaremos la Cueva del Murciélago, luego pasaremos por la Roca del Delfín y finalmente llegaremos a la Playa del Tesoro. Usaremos dos bloques para representar cada lugar: amarillo para la cueva, verde para la roca y azul para la playa. ¡Elijan sus colores y comencemos!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 10 y entrega los materiales.",
+                "dialogo": "Aquí tienen hojas y colores, CODE SQUAD. Dibujen los tres lugares y coloquen dos bloques al lado de cada dibujo para representar cada paso del mapa. ¡Listos para empezar!"
+            },
+            {
+                "step": 3,
+                "time": { "30": 5, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 11 y guía a los niños en el proceso.",
+                "dialogo": "Dibujen los tres lugares y coloquen los bloques en el orden correcto. Si no lo hacen bien la primera vez, no pasa nada. ¡Intentémoslo juntos!"
+            }
+        ],
+        "6": [
+            {
+                "step": 1,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 18 y recoge los códigos de cada equipo.",
+                "dialogo": "¡CODE SQUAD! Ya crearon un gran mapa para llegar al tesoro, ¡pero ahora vamos a intercambiarlos! Cada equipo recibirá el mapa de otro. La misión es seguir el nuevo camino para llegar a la Playa del Tesoro. ¡Presten mucha atención!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 19 y entrega los códigos.",
+                "dialogo": "¡Adelante, CODE SQUAD! Ahora tienen el mapa de otro equipo. Empiecen en la Cueva del Murciélago, pasen por la Roca del Delfín, y lleguen a la Playa del Tesoro. Usen dos bloques por lugar y sigan el orden. ¡A construir!"
+            }
+        ],
+        "7": [
+            {
+                "step": 1,
+                "time": { "30": 3, "40": 4, "50": 5 },
+                "accion": "Reproduce la DIAPOSITIVA 22 y explica el obstáculo.",
+                "dialogo": "¡CODE SQUAD! Justo cuando estaban por llegar a la Playa del Tesoro, una tormenta inesperada bloqueó el camino por la Roca del Delfín. El cuartel general nos ha enviado un nuevo mapa para esquivar la tormenta. ¡Ahora debemos encontrar un nuevo camino rodeando la roca! ¿Están listos para intentarlo? ¡Manos a la obra!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 23 con el nuevo código proyectado.",
+                "dialogo": "¡Vamos, CODE SQUAD! Usemos el nuevo mapa para rodear la tormenta. Empezamos en la Cueva del Murciélago y ahora evitamos la Roca del Delfín, pasando directo a la Playa del Tesoro. ¡Dos bloques por lugar!"
+            }
+        ]
+    },
+   "K2": {
+        "5.2": [
+            {
+                "step": 1,
+                "time": { "30": 1, "40": 1, "50": 1 },
+                "accion": "Reproduce la DIAPOSITIVA 12 y explica el reto.",
+                "dialogo": "¡CODE SQUAD! Nuestra misión tiene más paradas esta vez. Empezamos en la Cueva del Murciélago, luego vamos a la Roca del Delfín, después al Árbol del Mono y terminamos en la Playa del Tesoro. Cada lugar tendrá tres bloques. Elijan sus colores favoritos para representarlos y comencemos."
+            },
+            {
+                "step": 2,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 13 y distribuye los materiales.",
+                "dialogo": "Aquí tienen sus hojas y colores. Dibujen los cuatro lugares y coloquen tres bloques al lado de cada uno. ¡A trabajar, CODE SQUAD!"
+            },
+            {
+                "step": 3,
+                "time": { "30": 5, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 14 y acompaña a los niños.",
+                "dialogo": "Dibujen los lugares y coloquen los bloques en el orden correcto. ¡Recuerden seguir el mapa paso a paso para llegar al tesoro!"
+            }
+        ],
+        "6": [
+            {
+                "step": 1,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 18 y recoge los códigos de cada equipo.",
+                "dialogo": "¡CODE SQUAD! Ahora vamos a usar el mapa de otro equipo. Empezaremos en la Cueva del Murciélago, luego pasaremos por la Roca del Delfín y el Árbol del Mono, ¡y finalmente encontraremos el tesoro en la Playa del Tesoro! ¿Listos? ¡Manos a la obra!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 20 y entrega los códigos.",
+                "dialogo": "¡CODE SQUAD! Usen tres bloques por lugar y sigan el orden indicado en el mapa: Cueva del Murciélago - Roca del Delfín - Árbol del Mono - Playa del Tesoro. ¡Vamos a lograrlo!"
+            }
+        ],
+        "7": [
+            {
+                "step": 1,
+                "time": { "30": 3, "40": 4, "50": 5 },
+                "accion": "Reproduce la DIAPOSITIVA 22 y explica el obstáculo.",
+                "dialogo": "¡CODE SQUAD! Una tormenta impide que sigamos el camino planeado. Ahora debemos rodear el Árbol del Mono y pasar directo a la Playa del Tesoro. ¡Es hora de cambiar nuestra ruta y usar el nuevo código enviado por el cuartel! ¿Listos para intentarlo?"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 24 con el nuevo código proyectado.",
+                "dialogo": "¡Vamos a construir! Empezamos en la Cueva del Murciélago, pasamos por la Roca del Delfín, evitamos el Árbol del Mono, y llegamos a la Playa del Tesoro. ¡Tres bloques por lugar! ¡Sigan el patrón cuidadosamente!"
+            }
+        ]
+},
+    "K3": {
+        "5.3": [
+            {
+                "step": 1,
+                "time": { "30": 1, "40": 1, "50": 1 },
+                "accion": "Reproduce la DIAPOSITIVA 15 y explica el reto.",
+                "dialogo": "¡CODE SQUAD! Esta es la misión más difícil. Empezamos en la Cueva del Murciélago, seguimos hacia la Roca del Delfín, luego vamos al Árbol del Mono, atravesamos la Cascada Escondida y terminamos en la Playa del Tesoro. Usen cuatro bloques para cada lugar y sigan el orden correcto. ¡Vamos por ese tesoro!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 16 y entrega los materiales.",
+                "dialogo": "Aquí están los materiales, CODE SQUAD. Dibujen cada lugar y coloquen los bloques al lado. ¡Elijan sus colores favoritos y empecemos!"
+            },
+            {
+                "step": 3,
+                "time": { "30": 5, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 17 y supervisa la actividad.",
+                "dialogo": "Dibujen los cinco lugares y coloquen los bloques en el orden correcto. Si se equivocan, no pasa nada. ¡Intentémoslo otra vez!"
+            }
+        ],
+        "6": [
+            {
+                "step": 1,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 18 y recoge los códigos de cada equipo.",
+                "dialogo": "¡CODE SQUAD! Tienen en sus manos el mapa de otro equipo. La ruta será más larga: Cueva del Murciélago, Roca del Delfín, Árbol del Mono, Cascada Escondida y la Playa del Tesoro. ¡Vamos a seguirla y encontrar ese tesoro juntos!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 21 y entrega los códigos.",
+                "dialogo": "¡Muy bien, CODE SQUAD! Usen cuatro bloques por lugar y sigan cada paso del mapa. ¡No se salten ningún paso! Cueva del Murciélago - Roca del Delfín - Árbol del Mono - Cascada Escondida - Playa del Tesoro. ¡Vamos por ese tesoro!"
+            }
+        ],
+        "7": [
+            {
+                "step": 1,
+                "time": { "30": 3, "40": 4, "50": 5 },
+                "accion": "Reproduce la DIAPOSITIVA 22 y explica el obstáculo.",
+                "dialogo": "¡CODE SQUAD! El camino a través de la Cascada Escondida está bloqueado por la tormenta. ¡Debemos encontrar una ruta alternativa! Ahora rodearemos la cascada y seguiremos directo a la Playa del Tesoro. ¡Este es nuestro último esfuerzo para encontrar el tesoro!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 25 con el nuevo código proyectado.",
+                "dialogo": "¡Adelante, CODE SQUAD! Seguimos la nueva ruta: Cueva del Murciélago, Roca del Delfín, Árbol del Mono, evitamos la Cascada Escondida, y llegamos a la Playa del Tesoro. ¡Cuatro bloques por lugar! ¡Hagan el mejor trabajo posible!"
+            }
+        ]
+    }
+};
+
+
+
+        // Mostrar u ocultar actividades según el nivel seleccionado
+        var activities = {
+            "activity-0": true,
+            "activity-1": true,
+            "activity-2": true,
+            "activity-3": true,
+            "activity-4": true,
+            "activity-5": true,
+            "activity-6": true,
+            "activity-7": steps[level]["7"].some(s => s.time[time] > 0),
+            "activity-8": true
+        };
+
+        Object.keys(activities).forEach(function(activityId) {
+            var activityElement = document.getElementById(activityId);
+            if (activities[activityId]) {
+                activityElement.style.display = "block";
+            } else {
+                activityElement.style.display = "none";
+            }
+        });
+
+        // Renderizar los pasos dinámicamente en las tablas de actividades 5, 6 y 7
+        renderActivitySteps("activity-5-content", steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time);
+        renderActivitySteps("activity-6-content", steps[level]["6"], time);
+        renderActivitySteps("activity-7-content", steps[level]["7"], time);
+
+        document.getElementById("activity-5-total-time").innerText = calculateTotalTime(steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time) + " minutos";
+        document.getElementById("activity-6-total-time").innerText = calculateTotalTime(steps[level]["6"], time) + " minutos";
+        document.getElementById("activity-7-total-time").innerText = calculateTotalTime(steps[level]["7"], time) + " minutos";
+    }
+
+    function renderActivitySteps(contentId, steps, time) {
+        var contentContainer = document.getElementById(contentId);
+        contentContainer.innerHTML = "";
+        steps.forEach(function(step) {
+            if (step.time[time] > 0) {
+                var row = document.createElement("tr");
+                var stepCell = document.createElement("td");
+                var dialogCell = document.createElement("td");
+
+                stepCell.innerHTML = "<strong>PASO " + step.step + " (" + step.time[time] + " minutos):</strong> " + step.accion;
+                dialogCell.innerHTML = "<strong>DIÁLOGO SUGERIDO:</strong> " + step.dialogo;
+
+                row.appendChild(stepCell);
+                row.appendChild(dialogCell);
+                contentContainer.appendChild(row);
+            }
+        });
+    }
+
+    function calculateTotalTime(steps, time) {
+        return steps.reduce((total, step) => total + step.time[time], 0);
+    }
+
+    updateContent();
+</script>
+
